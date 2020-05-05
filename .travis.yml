@@ -6,5 +6,8 @@ script:
     - mkdir bin
     - make -B test
 
+notifications:
+    email: false
+
 after_success:
     - bash <(curl -s https://codecov.io/bash)
