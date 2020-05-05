@@ -1,4 +1,4 @@
-# CTestDrivenDev
+# Test-Driven Development in C
 This repository is a demonstration work flow to Test-Driven Development in C
 
 [![Build Status](https://travis-ci.com/foldfelis/CTestDrivenDev.svg?token=sCvSBz8RcnVXPVQx1yrZ&branch=master)](https://travis-ci.com/foldfelis/CTestDrivenDev)
