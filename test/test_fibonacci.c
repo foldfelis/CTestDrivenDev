@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include "../src/fibonacci.h"
+#include "test_fibonacci.h"
 
 int test_fib(void){
     int n = 10;
@@ -11,6 +12,6 @@ int test_fib(void){
     }
     puts("\n"
          "##########################\n"
-         "# Function 'Fib' tested. #\n"
+         "# Function 'fib' tested. #\n"
          "##########################");
 }
