@@ -13,6 +13,7 @@ test: $(srcs) $(tests) ./test/test_all.c
 	make clean
 	gcc -coverage $(srcs) $(tests) ./test/test_all.c -o ./bin/test_all
 	./bin/test_all
+	# `gcov` doesn't affect codecov.io
 	#gcov fibonacci factorial
 
 clean:
