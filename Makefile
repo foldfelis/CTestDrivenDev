@@ -1,24 +1,22 @@
-run: ./src/fibonacci.c \
-	./src/factorial.c \
+srcs := ./src/fibonacci.c \
+		./src/factorial.c
+
+tests := ./test/test_fibonacci.c \
+		./test/test_factorial.c
+
+run: $(srcs) \
 	./src/main.c
 	make clean
-	gcc ./src/fibonacci.c \
-		./src/factorial.c \
+	gcc $(srcs) \
 		./src/main.c \
 		-o ./bin/main
 	./bin/main
 
-test: ./src/fibonacci.c \
-	./src/factorial.c \
-	./test/test_fibonacci.c \
-	./test/test_factorial.c \
+test: $(srcs) $(tests) \
 	./test/test_all.c
 	make clean
 	gcc -coverage \
-		./src/fibonacci.c \
-		./src/factorial.c \
-		./test/test_fibonacci.c \
-		./test/test_factorial.c \
+		$(srcs) $(tests) \
 		./test/test_all.c \
 		-o ./bin/test_all
 	./bin/test_all
